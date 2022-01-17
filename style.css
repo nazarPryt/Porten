@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'PT Sans'; 
+    src: url(fonts/PTSans-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+    /* body {
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Playfair Display';
+} */
+.na {
+    font-family: 'PT Sans';
+    font-weight: bold;
+}
