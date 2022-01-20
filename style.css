@@ -251,7 +251,7 @@ colection__inner__about__wrapper-card {
 }
 
 /***        New     ***/
-.new {
+.new, .brends {
     text-align: center;
     margin: 100px 0;
 }
@@ -265,5 +265,26 @@ colection__inner__about__wrapper-card {
     column-gap: 15px;
     row-gap: 30px;
 }
+
+/***    Brend   ***/
+.brends__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.brends__inner__card {
+    flex: 0 0 25%;
+    margin: 30px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
