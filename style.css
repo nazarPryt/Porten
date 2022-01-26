@@ -44,11 +44,9 @@ body {
 
 /***    Header  ***/
 .header {
-    position: fixed;
     width: 100%;
     padding-top: 14px;
     background-color: black;
-    z-index: 100;
 }
 .header__inner {
     display: flex;
@@ -139,27 +137,39 @@ body {
     object-fit: cover;
 }
 .main__inner {
-    flex: 0 0 35%;
-    padding-top: 12px;
+    flex: 0 0 50%;
     text-transform: uppercase;
     text-align: center;
 }
 .main__title-wrap {
-    max-width: 320px;
-    margin: 0 auto 80px;
+    max-width: calc(250px + (320 - 250) * ((100vw - 320px) / (1200 - 320)));
+    margin: 80px auto;
     border: solid 2px white;
-    padding: 95px 65px;
+    padding: calc(70px + (95 - 70) * ((100vw - 320px) / (1200 - 320))) calc(50px + (65 - 50) * ((100vw - 320px) / (1200 - 320)));
+ 
 }
 .main__title {
+    position: relative;
     font-family: 'PostNoBillsJaffna';
-    font-size: 64px;
+    font-size: calc(42px + (64 - 42) * ((100vw - 320px) / (1200 - 320)));
     font-weight: bold;
-    line-height: 1;
-    border-bottom: 1px solid white;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+.main__title::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 .main__sub-title {
     font-weight: 400;
-    font-size: 22px;
+    font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1200 - 320)));
     line-height: 28px;
 }
 .main__about {
@@ -178,14 +188,17 @@ body {
 }
 .section-title::after {
     content: "";
+    display: block;
     position: absolute;
-    width: 30%;
+    width: 120px;
     height: 1px;
-    bottom: -15px;
-    /* left: 0;
-    right: 0; */
     background-color: white;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
+
 .section_btn {
     color: white;
     padding: 10px 20px;
@@ -250,7 +263,7 @@ colection__inner__about__wrapper-card {
     z-index: -1;
 }
 
-/***        New     ***/
+/***    New     ***/
 .new, .brends {
     text-align: center;
     margin: 100px 0;
@@ -341,5 +354,11 @@ colection__inner__about__wrapper-card {
     text-decoration: none;
 }
 
-
-
+@media (max-width: 1100px){
+    .main__inner {
+        flex: 0 0 80%;
+    }
+}
+@media (max-width: 615px) {
+    /* зробити бургер на хедер*/
+}
