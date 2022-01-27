@@ -408,10 +408,30 @@ colection__inner__about__wrapper-card {
     }
 }
 @media (max-width: 700px) {
+    body.lock {
+        overflow: hidden;
+    }
     .header {
         padding: 15px 0;
     }
+    .header__inner-logo {
+        margin-left: 20px;
+    }
     .header__inner {
+        display: none;
+    }
+    .header__inner-list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .header__inner-nav__item {
+        color: white;
+    }
+    .header__inner__sign-in {
+        text-align: center;
+    }
+    .header__inner.burger__menu {
+        display: block;
         position: absolute;
         top: -100%;
     }
@@ -422,6 +442,7 @@ colection__inner__about__wrapper-card {
         height: 30px;
         margin-right: 25px;
         margin-left: auto;
+        z-index: 5;
     }
     .header__burger span {
         top: 14px;
@@ -453,8 +474,13 @@ colection__inner__about__wrapper-card {
     .header__burger.header__burger__btn--active span {
         transform: scale(0);
     }
-    .header__inner.header__inner-list--active {
+    .header__inner.burger__menu.header__burger__btn--active {
+        background-color: gray;
+        width: 100%;
         top: 0;
+        z-index: 3;
+        transition: linear 0.3s;
+        overflow: auto;
     }
 
 }   
